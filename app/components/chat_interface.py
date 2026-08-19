@@ -69,24 +69,24 @@ class ChatInterface:
     
     def _render_chat_header(self) -> None:
         """Renderiza el encabezado del chat."""
-        st.markdown("""
+        st.markdown(f"""
         <style>
-        .chat-header {
+        .chat-header {{
             background: linear-gradient(90deg, #1f77b4, #2ca02c);
             color: white;
             padding: 1rem;
             border-radius: 0.5rem 0.5rem 0 0;
             margin: -1rem -1rem 1rem -1rem;
-        }
-        .chat-header h1 {
+        }}
+        .chat-header h1 {{
             margin: 0;
             font-size: 1.5rem;
-        }
+        }}
         </style>
         <div class="chat-header">
-            <h1>💬 {title}</h1>
+            <h1>💬 {self.title}</h1>
         </div>
-        """.format(title=self.title), unsafe_allow_html=True)
+        """, unsafe_allow_html=True)
     
     def _render_messages(self) -> None:
         """Renderiza los mensajes del historial de chat."""
