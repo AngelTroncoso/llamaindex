@@ -1,0 +1,125 @@
+NORMAS DE CARÁCTER GENERAL (NCG) - COMISIÓN PARA EL MERCADO FINANCIERO
+====================================================================
+
+INTRODUCCIÓN
+------------
+Las Normas de Carácter General (NCG) son el principal instrumento normativo de la Comisión para el Mercado Financiero (CMF). Estas normas regulan el funcionamiento, supervisión y fiscalización de las entidades fiscalizadas por la CMF.
+
+ENTIDADES FISCALIZADAS
+----------------------
+La CMF fiscaliza las siguientes entidades:
+1. Bancos
+2. Instituciones financieras
+3. Cooperativas de ahorro y crédito
+4. Sociedades de garantía recíproca
+5. Administradoras de fondos de pensiones (AFP)
+6. Compañías de seguros
+7. Intermediarios de valores
+8. Sociedades administradoras de fondos de inversión
+9. Bolsas de valores
+10. Depósitos de valores
+11. Calificadoras de riesgo
+12. Auditores externos de entidades fiscalizadas
+
+NCG PRINCIPALES
+--------------
+
+NCG N° 1: Normas Generales
+- Establece los principios generales de fiscalización
+- Requisitos de información y transparencia
+- Obligaciones de reportes periódicos
+
+NCG N° 2: Gobierno Corporativo
+- Estructura de directorios
+- Comités de auditoría y riesgos
+- Políticas de remuneración
+- Deberes de los directores
+
+NCG N° 3: Gestión de Riesgos
+- Marco general de gestión de riesgos
+- Riesgo de crédito
+- Riesgo de mercado
+- Riesgo de liquidez
+- Riesgo operativo
+- Riesgo de cumplimiento
+
+NCG N° 4: Solvencia
+- Requisitos de patrimonio
+- Coeficientes de solvencia
+- Pruebas de estrés
+- Límites de exposición
+
+NCG N° 5: Liquidez
+- Coeficientes de liquidez
+- Activos líquidos
+- Pasivos exigibles
+- Escenarios de estrés
+
+NCG N° 6: Prevención del Lavado de Activos
+- Identificación de clientes
+- Reporte de operaciones sospechosas
+- Programas de cumplimiento
+- Capacitación del personal
+
+NCG N° 7: Transparencia
+- Información pública
+- Estados financieros
+- Informes de gestión
+- Políticas y procedimientos
+
+NCG N° 8: Conducta de Mercado
+- Protección al consumidor financiero
+- Publicidad y marketing
+- Conflictos de interés
+- Tratamiento de quejas
+
+REQUISITOS DE CAPITAL
+---------------------
+- Capital mínimo según tipo de entidad
+- Coeficiente de solvencia: mínimo 8% de activos ponderados por riesgo
+- Capital adicional para riesgos específicos
+- Test de estrés anual
+
+REQUISITOS DE LIQUIDEZ
+---------------------
+- Coeficiente de liquidez corriente: LCR (Liquidity Coverage Ratio)
+- Coeficiente de liquidez a largo plazo: NSFR (Net Stable Funding Ratio)
+- Activos líquidos de alta calidad (HQLA)
+- Planes de contingencia de liquidez
+
+REPORTE Y TRANSPARENCIA
+-----------------------
+- Estados financieros trimestrales y anuales
+- Informes de gestión
+- Informes de riesgos
+- Informes de cumplimiento
+- Publicación en sitios web
+
+SUPERVISIÓN CONTINUA
+--------------------
+La CMF realiza:
+- Inspecciones in situ
+- Análisis de información reportada
+- Evaluación de riesgos
+- Revisión de gobierno corporativo
+- Seguimiento de recomendaciones
+
+SANCIONES
+--------
+La CMF puede aplicar:
+- Multas
+- Ordenes de regularización
+- Suspensión de autorizaciones
+- Revocación de autorizaciones
+- Prohibición temporal o definitiva para personas
+
+ACCESO A NORMATIVA
+------------------
+Toda la normativa de la CMF está disponible en:
+- Sitio web oficial: https://www.cmfchile.cl
+- Sistema de Consultas Normativas (SCN)
+- Boletín de la CMF
+
+---
+Fuente: Comisión para el Mercado Financiero (CMF)
+Vigencia: Actualizada a 2024

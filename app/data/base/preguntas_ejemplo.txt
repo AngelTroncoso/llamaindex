@@ -1,0 +1,124 @@
+PREGUNTAS DE EJEMPLO PARA EL AGENTE FINANCIERO
+===============================================
+
+Este documento contiene preguntas de ejemplo que puedes hacer al Asistente de Regulacion Financiera Chile para probar su funcionalidad.
+
+---
+
+CATEGORIA: LEY GENERAL DE BANCOS (LGB)
+---------------------------------------
+
+1. ¿Qué dice la Ley General de Bancos sobre el capital mínimo de los bancos?
+2. ¿Cuál es el coeficiente de solvencia exigido para los bancos en Chile?
+3. ¿Qué entidades supervisan a los bancos en Chile?
+4. ¿Cuál es el encaje legal que deben mantener los bancos?
+5. ¿Qué requisitos se necesitan para constituir un banco?
+6. ¿Qué tipo de sociedades pueden ser bancos?
+7. ¿Qué facultades tiene el Banco Central de Chile sobre los bancos?
+8. ¿Cuáles son las sanciones por incumplimiento de la LGB?
+
+---
+
+CATEGORIA: COMISIÓN PARA EL MERCADO FINANCIERO (CMF)
+------------------------------------------------------
+
+1. ¿Qué entidades fiscaliza la CMF?
+2. ¿Cuáles son las NCG más importantes?
+3. ¿Qué es la NCG N°3 y qué regula?
+4. ¿Cuáles son los requisitos de capital para las entidades fiscalizadas?
+5. ¿Qué es el LCR y el NSFR?
+6. ¿Qué Obligaciones tienen las entidades en materia de transparencia?
+7. ¿Cómo se realiza la supervisión continua de la CMF?
+8. ¿Qué sanciones puede aplicar la CMF?
+
+---
+
+CATEGORIA: NIIF/IFRS
+-------------------
+
+1. ¿Qué es la NIIF 9 y cuál es su objetivo?
+2. ¿Cuáles son las categorías de clasificación de activos financieros según NIIF 9?
+3. ¿Qué es el modelo de pérdidas crediticias esperadas?
+4. ¿Cuáles son las tres etapas del deterioro según NIIF 9?
+5. ¿Qué información debe revelarse sobre instrumentos financieros?
+6. ¿Cómo se miden los instrumentos financieros inicialmente según NIIF 9?
+7. ¿Qué es el valor razonable según NIIF 13?
+8. ¿Cuándo es obligatoria la aplicación de NIIF 9 en Chile?
+
+---
+
+CATEGORIA: SII (SERVICIO DE IMPUESTOS INTERNOS)
+--------------------------------------------------
+
+1. ¿Cuál es la tasa general del IVA en Chile?
+2. ¿Qué es el DL 825?
+3. ¿Cuáles son las obligaciones tributarias de los contribuyentes?
+4. ¿Qué es la Ley sobre Impuesto a la Renta?
+5. ¿Cuáles son las exenciones al IVA?
+6. ¿Qué es el FUT y cómo funciona?
+7. ¿Cuáles son los plazos para la declaración de impuestos?
+8. ¿Qué es el RUT y para qué sirve?
+
+---
+
+CATEGORIA: BANCO CENTRAL DE CHILE (BCCh)
+-------------------------------------------
+
+1. ¿Cuáles son las funciones principales del Banco Central de Chile?
+2. ¿Qué es la política monetaria?
+3. ¿Qué es el CNF?
+4. ¿Qué es el CNMF?
+5. ¿Cómo regula el BCCh la liquidez del sistema financiero?
+6. ¿Qué es el encaje bancario?
+7. ¿Qué instrumentos usa el BCCh para controlar la inflación?
+8. ¿Cómo afecta el BCCh a las tasas de interés?
+
+---
+
+CATEGORIA: ANÁLISIS DE DOCUMENTOS
+-------------------------------
+
+1. Analiza este contrato de préstamo bancario
+2. Revisa estos estados financieros
+3. ¿Qué cláusulas son importantes en un contrato de arrendamiento?
+4. ¿Cómo se calcula el ROI en este informe financiero?
+5. ¿Qué riesgos financieros identificas en este documento?
+6. ¿Este contrato cumple con la normativa chilena?
+7. ¿Cuáles son las obligaciones tributarias mencionadas en este documento?
+8. ¿Qué información falta en este reporte financiero según NIIF?
+
+---
+
+CATEGORIA: RECOMENDACIONES
+------------------------
+
+1. ¿Qué documentos debo cargar para analizar un contrato bancario?
+2. ¿Qué normativa debo revisar para una operación de crédito?
+3. ¿Qué documentos son necesarios para entender la NIIF 9?
+4. ¿Qué información necesito para la declaración de IVA?
+5. ¿Qué normativa aplica a las sociedades anónimas?
+6. ¿Qué documentos debo revisar para un análisis de solvencia?
+7. ¿Qué estándares contables debo considerar para estados financieros?
+8. ¿Qué normativa regula el mercado de valores en Chile?
+
+---
+
+CATEGORIA: COMPARACIONES
+-----------------------
+
+1. ¿Cuáles son las diferencias entre la LGB y la Ley de Mercado de Valores?
+2. Compara NIIF 9 con NIC 39
+3. ¿Qué cambios hubo entre la antigua Ley de Bancos y la actual LGB?
+4. Compara los requisitos de capital de BCCh vs CMF
+5. ¿Cuáles son las diferencias entre NIIF 9 y NIIF 16?
+6. ¿Cómo ha evolucionado la normativa de prevención de lavado de activos?
+7. Compara los encajes exigidos por el BCCh en diferentes épocas
+8. ¿Cuáles son las diferencias entre las NCG y las Circulares de la CMF?
+
+---
+
+INSTRUCCIONES:
+1. Copia y pega cualquier pregunta en el chat
+2. El sistema te responderá con información relevante
+3. El sistema también te sugerirá documentos relacionados
+4. Puedes cargar tus propios documentos para análisis específico

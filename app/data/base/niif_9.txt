@@ -1,0 +1,109 @@
+NIIF 9 - INSTRUMENTOS FINANCIEROS
+====================================
+
+OBJETIVO
+--------
+El objetivo de esta NIIF es establecer los principios para la información financiera de instrumentos financieros. Los principios para la clasificación y medición de activos financieros se aplicarán a los siguientes instrumentos:
+- Activos financieros
+- Pasivos financieros
+- Algunos contratos de compra o venta de ítems no financieros
+
+ALCANCE
+-------
+Esta NIIF se aplicará a todos los instrumentos financieros, excepto:
+- Inversiones en subsidiarias, asociadas y entidades controladas de forma conjunta
+- Derechos y obligaciones que surgen de contratos de seguro
+- Instrumentos de patrimonio propio
+- Instrumentos financieros que se contabilicen como pasivos o patrimonio
+
+CLASSIFICACIÓN DE ACTIVOS FINANCIEROS
+-----------------------------------
+Los activos financieros se clasificarán en las siguientes categorías:
+
+1. A Valor Razonable con Cambios en Resultados (FVTPL)
+   - Inversiones mantenidas para negociación
+   - Derivados (excepto derivados de cobertura)
+   - Activos financieros designados al valor razonable
+
+2. A Valor Razonable con Cambios en Otro Resultado Integral (FVOCI)
+   - Inversiones en acciones no cotizadas
+   - Algunos instrumentos de deuda
+   - Inversiones en instrumentos de patrimonio
+
+3. A Costo Amortizado
+   - Préstamos y cuentas por cobrar
+   - Inversiones en deuda mantenidas hasta el vencimiento
+   - Depósitos a plazo
+
+CLASSIFICACIÓN DE PASIVOS FINANCIEROS
+------------------------------------
+Los pasivos financieros se clasificarán como:
+
+1. A Valor Razonable con Cambios en Resultados (FVTPL)
+   - Pasivos mantenidos para negociación
+   - Derivados que son pasivos
+   - Obligaciones bajo contratos de garantía financiera
+
+2. Otros Pasivos Financieros (a costo amortizado)
+   - Préstamos recibidos
+   - Cuentas por pagar comerciales
+   - Bonos emitidos
+
+MEDICIÓN INICIAL
+---------------
+Un activo financiero o un pasivo financiero se medirá inicialmente a su valor razonable.
+Para un activo financiero o un pasivo financiero no mantenido para negociación, se añadirán los costos de transacción directamente atribuibles.
+
+MEDICIÓN POSTERIOR
+-----------------
+- FVTPL: Valor razonable con cambios en resultados
+- FVOCI: Valor razonable con cambios en otro resultado integral
+- Costo Amortizado: Método del interés efectivo
+
+DETERIORO DE VALOR
+------------------
+La NIIF 9 introduce el modelo de pérdidas crediticias esperadas, que reemplaza al modelo de pérdidas incurridas de la NIC 39.
+
+Principios clave:
+1. Reconocimiento de pérdidas crediticias en todas las etapas
+2. Tres etapas para la medición del deterioro:
+   - Etapa 1: 12 meses de pérdidas crediticias esperadas
+   - Etapa 2: Pérdidas crediticias esperadas de por vida
+   - Etapa 3: Pérdidas crediticias (similar a NIC 39)
+
+REVELOCACIONES
+--------------
+La NIIF 9 requiere revelaciones cualitativas y cuantitativas que permitan a los usuarios de los estados financieros evaluar:
+- La naturaleza y extensión de los riesgos que surgen de los instrumentos financieros
+- Cómo la entidad gestiona esos riesgos
+
+INFORMACIÓN A REVELAR
+----------------------
+1. Estado de situación financiera:
+   - Categorías de activos y pasivos financieros
+   - Valor razonable de cada categoría
+   - Deterioro acumulado
+
+2. Estado del resultado integral:
+   - Ganancias/pérdidas por valor razonable
+   - Ganancias/pérdidas por deterioro
+   - Ingresos por intereses
+
+3. Notas a los estados financieros:
+   - Descripción de los instrumentos financieros
+   - Métodos de valoración
+   - Riesgos de crédito, liquidez y mercado
+
+ADOPCIÓN EN CHILE
+-----------------
+En Chile, la NIIF 9 es de aplicación obligatoria para:
+- Emisores de valores de oferta pública
+- Entidades fiscalizadas por la CMF
+- Empresas que formulen estados financieros según NIIF
+
+La CMF ha emitido guías y circulares para la implementación de la NIIF 9 en el contexto chileno.
+
+---
+Fuente: IASB - NIIF 9
+Vigencia: Obligatoria desde el 1 de enero de 2018
+Adaptación Chile: CMF - Circulares varias
