@@ -12,6 +12,13 @@ import logging
 import sys
 import os
 
+# Importar cliente de Gemini (opcional, solo si está instalado)
+try:
+    import google.generativeai as genai
+    GEMINI_AVAILABLE = True
+except ImportError:
+    GEMINI_AVAILABLE = False
+
 # Añadir el directorio raíz al path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -217,6 +224,47 @@ def create_data_recommender() -> Optional[DataRecommender]:
         return None
 
 
+# Callback para procesar mensajes del chat con LLM directo
+def handle_chat_message_with_gemini(message: str) -> Dict[str, Any]:
+    """Procesa mensaje usando Google Gemini directamente.
+    
+    Args:
+        message: Mensaje del usuario.
+        
+    Returns:
+        Diccionario con la respuesta.
+    """
+    try:
+        if not GEMINI_AVAILABLE or "GOOGLE_API_KEY" not in os.environ:
+            return {
+                "content": "Por favor, configura tu API Key de Google Gemini en la barra lateral.",
+                "citations": []
+            }
+        
+        # Obtener modelo seleccionado
+        model_name = st.session_state.get("gemini_model", "gemini-1.5-flash")
+        
+        # Crear cliente y modelo
+        client = genai.Client()
+        model = client.models.get(model_name)
+        
+        # Generar respuesta
+        response = model.generate_content(message)
+        
+        # Devolver respuesta
+        return {
+            "content": response.text,
+            "citations": []
+        }
+        
+    except Exception as e:
+        logger.error(f"Error con Gemini: {str(e)}")
+        return {
+            "content": f"Error al usar Gemini: {str(e)}",
+            "citations": []
+        }
+
+
 # Callback para procesar mensajes del chat
 def handle_chat_message(message: str, agent: FinancialAgent, 
                         kb: KnowledgeBase, recommender: DataRecommender) -> Dict[str, Any]:
@@ -291,7 +339,7 @@ def render_sidebar() -> None:
         # Selección del modelo LLM
         llm_provider = st.selectbox(
             "Proveedor LLM",
-            ["Ollama (Local)", "OpenAI"],
+            ["Google Gemini", "Ollama (Local)", "OpenAI"],
             index=0,
             key="llm_provider"
         )
@@ -303,23 +351,39 @@ def render_sidebar() -> None:
                 index=1,
                 key="ollama_model"
             )
-        else:
+        elif llm_provider == "OpenAI":
             model = st.selectbox(
                 "Modelo",
                 ["gpt-4", "gpt-3.5-turbo"],
                 index=1,
                 key="openai_model"
             )
-        
             # Campo para API key de OpenAI
-            if llm_provider == "OpenAI":
-                api_key = st.text_input(
-                    "OpenAI API Key",
-                    type="password",
-                    key="openai_api_key"
-                )
-                if api_key:
-                    os.environ["OPENAI_API_KEY"] = api_key
+            api_key = st.text_input(
+                "OpenAI API Key",
+                type="password",
+                key="openai_api_key"
+            )
+            if api_key:
+                os.environ["OPENAI_API_KEY"] = api_key
+        elif llm_provider == "Google Gemini" and GEMINI_AVAILABLE:
+            model = st.selectbox(
+                "Modelo",
+                ["gemini-1.5-pro", "gemini-1.5-flash", "gemini-1.0-pro"],
+                index=0,
+                key="gemini_model"
+            )
+            # Campo para API key de Google
+            gemini_api_key = st.text_input(
+                "Google API Key (Gemini)",
+                type="password",
+                key="gemini_api_key"
+            )
+            if gemini_api_key:
+                os.environ["GOOGLE_API_KEY"] = gemini_api_key
+                # Inicializar cliente de Gemini
+                genai.configure(api_key=gemini_api_key)
+                st.session_state["gemini_client_configured"] = True
         
         st.markdown("---")
         
@@ -403,7 +467,12 @@ def render_main_area() -> None:
             recommendation_engine.set_on_document_select_callback(handle_document_select)
     
     # Configurar callback del chat
-    if agent and kb and recommender:
+    llm_provider = st.session_state.get("llm_provider", "Google Gemini")
+    
+    if llm_provider == "Google Gemini" and GEMINI_AVAILABLE:
+        # Usar Gemini directamente
+        chat_interface.set_on_submit_callback(handle_chat_message_with_gemini)
+    elif agent and kb and recommender:
         chat_interface.set_on_submit_callback(
             lambda msg: handle_chat_message(msg, agent, kb, recommender)
         )
