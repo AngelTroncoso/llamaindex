@@ -68,19 +68,22 @@ class ChatInterface:
         return user_message
     
     def _render_chat_header(self) -> None:
-        """Renderiza el encabezado del chat."""
+        """Renderiza el encabezado del chat con estilo premium."""
         st.markdown(f"""
         <style>
         .chat-header {{
-            background: linear-gradient(90deg, #1f77b4, #2ca02c);
+            background: linear-gradient(135deg, #0F3D54 0%, #2E86AB 100%);
             color: white;
-            padding: 1rem;
-            border-radius: 0.5rem 0.5rem 0 0;
+            padding: 1.25rem 1rem;
+            border-radius: 12px 12px 0 0;
             margin: -1rem -1rem 1rem -1rem;
+            box-shadow: 0 4px 10px rgba(15, 61, 84, 0.2);
         }}
         .chat-header h1 {{
             margin: 0;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }}
         </style>
         <div class="chat-header">
@@ -135,7 +138,7 @@ class ChatInterface:
             self._render_message(message, i)
     
     def _render_message(self, message: Dict[str, Any], index: int) -> None:
-        """Renderiza un mensaje individual.
+        """Renderiza un mensaje individual con estilo premium.
         
         Args:
             message: Diccionario con información del mensaje.
@@ -146,30 +149,49 @@ class ChatInterface:
         citations = message.get("citations", [])
         timestamp = message.get("timestamp", "")
         
-        # Determinar clase CSS
-        if role == "user":
-            css_class = "user-message"
-            icon = "👤"
-        elif role == "assistant":
-            css_class = "assistant-message"
-            icon = "🤖"
-        else:
-            css_class = "system-message"
-            icon = "ℹ️"
+        # Configuración por rol
+        role_config = {
+            "user": {
+                "css_class": "user-message",
+                "icon": "👤",
+                "avatar_class": "user-avatar",
+                "role_name": "USUARIO"
+            },
+            "assistant": {
+                "css_class": "assistant-message",
+                "icon": "🤖",
+                "avatar_class": "assistant-avatar",
+                "role_name": "ASISTENTE"
+            },
+            "system": {
+                "css_class": "system-message",
+                "icon": "ℹ️",
+                "avatar_class": "system-avatar",
+                "role_name": "SISTEMA"
+            }
+        }
         
-        # Contenedor del mensaje
+        config = role_config.get(role, role_config["user"])
+        
+        # Formatear contenido
+        if isinstance(content, dict):
+            content = str(content)
+        
+        # Contenedor del mensaje con avatar
         st.markdown(f"""
-        <div class="message-container {css_class}">
-            <span style="font-size: 0.9rem;">{icon} <strong>{role.upper()}</strong></span>
-            <div style="margin-top: 0.25rem;">{content}</div>
+        <div style="display: flex; gap: 0.5rem; margin: 0.75rem 0; animation: fadeIn 0.3s ease;">
+            <div class="message-avatar {config['avatar_class']}">{config['icon']}</div>
+            <div class="chat-message {config['css_class']}">
+                <div class="message-role">{config['role_name']}</div>
+                <div class="message-content">{content}</div>
         """, unsafe_allow_html=True)
         
         # Mostrar citas si existen
-        if citations and role == "assistant":
-            citations_html = " | ".join([f"<a href='{c}' target='_blank'>{c}</a>" for c in citations])
+        if citations and role == "assistant" and citations:
+            citations_html = " | ".join([f"<a href='{c}' target='_blank' style='color: #0F3D54;'>{c}</a>" for c in citations])
             st.markdown(f"""
-            <div class="citations">
-                📚 Fuentes: {citations_html}
+            <div style="margin-left: 40px; margin-top: 0.5rem; font-size: 0.8rem;">
+                <strong>📚 Fuentes:</strong> {citations_html}
             </div>
             """, unsafe_allow_html=True)
         
@@ -178,24 +200,36 @@ class ChatInterface:
             try:
                 dt = datetime.fromisoformat(timestamp)
                 formatted_time = dt.strftime("%H:%M:%S")
-                st.caption(f"{formatted_time}")
-            except:
-                pass
+                st.markdown(f"""
+                <div style="margin-left: 40px; margin-top: 0.25rem; font-size: 0.75rem; color: #64748B;">
+                    {formatted_time}
+                </div>
+                """, unsafe_allow_html=True)
+            except Exception as e:
+                logger.debug(f"Error formateando timestamp: {str(e)}")
     
     def _render_welcome_message(self) -> None:
-        """Renderiza el mensaje de bienvenida."""
+        """Renderiza el mensaje de bienvenida premium."""
         st.markdown("""
-        <div style="text-align: center; padding: 2rem; color: #666;">
-            <h2>👋 ¡Bienvenido al Asistente de Regulación Financiera Chile!</h2>
-            <p>Puedo ayudarte con:</p>
-            <ul style="text-align: left; display: inline-block;">
-                <li>Consultas sobre normativa BCCh, CMF, SII</li>
-                <li>Análisis de estándares NIIF/IFRS</li>
-                <li>Revisión de contratos y estados financieros</li>
-                <li>Comparación entre normativas</li>
-                <li>Recomendaciones de documentos a cargar</li>
-            </ul>
-            <p><em>Carga documentos en el panel izquierdo y hazme tu consulta.</em></p>
+        <div class="welcome-container">
+            <div class="welcome-icon">
+                <span>🤖</span>
+            </div>
+            <h2 class="welcome-title">¡Bienvenido al Asistente de Regulación Financiera Chile!</h2>
+            <p class="welcome-subtitle">
+                Soy tu asistente de IA especializado en normativa financiera chilena.
+            </p>
+            <div class="welcome-features">
+                <p>Puedo ayudarte con:</p>
+                <ul>
+                    <li>Consultas sobre normativa BCCh, CMF, SII</li>
+                    <li>Análisis de estándares NIIF/IFRS</li>
+                    <li>Revisión de contratos y estados financieros</li>
+                    <li>Comparación entre normativas</li>
+                    <li>Recomendaciones de documentos a cargar</li>
+                </ul>
+            </div>
+            <p class="welcome-tip">👆 Carga documentos en el panel izquierdo y hazme tu consulta.</p>
         </div>
         """, unsafe_allow_html=True)
     

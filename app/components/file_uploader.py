@@ -186,21 +186,37 @@ class FileUploader:
         return result
     
     def _render_file_preview(self, files: List[Dict[str, Any]]) -> None:
-        """Muestra vista previa de los archivos recién subidos.
+        """Muestra vista previa de los archivos recién subidos con estilo premium.
         
         Args:
             files: Lista de archivos a mostrar.
         """
-        with st.expander(f"📄 {len(files)} archivo(s) cargado(s)", expanded=True):
+        icon_map = {
+            ".pdf": "📄",
+            ".docx": "📝",
+            ".doc": "📝",
+            ".xlsx": "📊",
+            ".xls": "📊",
+            ".txt": "📃",
+            ".csv": "📋"
+        }
+        
+        with st.expander(f"📁 {len(files)} archivo(s) cargado(s)", expanded=True):
             for file_info in files:
-                cols = st.columns([3, 1, 1, 1])
+                ext = file_info.get('extension', '').lower()
+                icon = icon_map.get(ext, "📎")
+                
+                cols = st.columns([1, 3, 1, 1])
                 
                 with cols[0]:
-                    st.write(f"**{file_info['name']}**")
-                    st.caption(f"Tipo: {file_info['type']} | Tamaño: {self._format_file_size(file_info['size'])}")
+                    st.markdown(f"<div style='font-size: 2rem;'>{icon}</div>", unsafe_allow_html=True)
                 
                 with cols[1]:
-                    st.success("✓ Listo")
+                    name = file_info['name']
+                    if len(name) > 25:
+                        name = name[:22] + "..."
+                    st.markdown(f"**{name}**")
+                    st.caption(f"{file_info['type']} | {self._format_file_size(file_info['size'])}")
                 
                 with cols[2]:
                     if st.button("Ver", key=f"view_{file_info['id']}"):
