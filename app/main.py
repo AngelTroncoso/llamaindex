@@ -13,7 +13,7 @@ import sys
 import os
 
 # Añadir el directorio raíz al path
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Importar componentes
 from app.components.file_uploader import FileUploader, create_file_uploader
