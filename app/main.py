@@ -433,9 +433,9 @@ def render_main_area() -> None:
     """Renderiza el área principal de la aplicación."""
     # Inicializar componentes
     file_uploader = create_file_uploader(
-        label="📁 Cargar Documentos",
+        label="📁 Cargar Documentos (Arrastra múltiples archivos)",
         accept_multiple_files=True,
-        help_text="Soporta PDF, Word, Excel, TXT, CSV. Max 100MB por archivo."
+        help_text="Soporta PDF, Word, Excel, TXT, CSV. Max 100MB por archivo. ✨ Puedes cargar varios archivos a la vez."
     )
     
     chat_interface = create_chat_interface(
@@ -490,7 +490,8 @@ def render_main_area() -> None:
     
     with col1:
         # Área de carga de documentos
-        st.subheader("📁 Gestión de Documentos")
+        st.markdown("### 📁 Gestión de Documentos")
+        st.markdown("*Carga múltiples archivos para analizar con el asistente*")
         
         # Mostrar file uploader
         uploader_result = file_uploader.render_with_preview()
@@ -519,10 +520,13 @@ def render_main_area() -> None:
         # Mostrar estadísticas de documentos
         uploaded_files = st.session_state.get("financial_copilot_uploaded_files", [])
         if uploaded_files:
-            st.success(f"✅ {len(uploaded_files)} documento(s) cargado(s)")
+            st.success(f"✅ **{len(uploaded_files)} documento(s) cargado(s)**")
+        else:
+            st.info("Carga documentos para que el asistente pueda analizar su contenido")
         
         # Mostrar recomendaciones
         st.markdown("---")
+        st.markdown("### 📚 Análisis y Recomendaciones")
         recommendation_engine.render()
     
     with col2:
