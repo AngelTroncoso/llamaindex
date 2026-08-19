@@ -3,6 +3,7 @@
 > **Sistema de Asesoramiento Financiero Chileno basado en IA**
 > Asistente inteligente que combina LlamaIndex + RAG + Motor de Recomendacion para normativa BCCh, CMF, SII y NIIF/IFRS.
 
+[links del MVP ](https://llamaindex-2aaurbuvqnfrhkiebeuwuk.streamlit.app/)
 ---
 
 ## Caracteristicas Principales
